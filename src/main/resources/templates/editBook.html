@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Server Programmings</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+	<h1>Edit book:</h1>
+	<div class="container">
+		<div class="col-md-4">
+		<form th:object="${book}" th:action="@{../save}" action="#"
+			method="post">
+
+			
+					<input type="hidden" th:field="*{id}" class="form-control" />
+				
+				
+					<label for="author">Title:</label> 
+					<input type="text" th:field="*{title}" class="form-control"/>
+					<div style="clear: both; display: block; height: 10px;"></div>
+			
+			
+					<label for="author">Author:</label> 
+					<input type="text" id="author" th:field="*{author}" class="form-control"/>
+					<div style="clear: both; display: block; height: 10px;"></div>
+				
+					<label for="isbn">Isbn no: </label> 
+					<input type="text" th:field="*{isbn}" class="form-control" />
+					<div style="clear: both; display: block; height: 10px;"></div>
+			
+				<label for="catlist">Category:</label>
+				
+				 <select id="catlist" th:field="*{category}" class="form-control">
+					<option th:each="category: ${categories}"
+						th:value="${category.categoryid}" th:text="${category.name}">
+					</option>
+				</select>
+				
+				<div style="clear: both; display: block; height: 10px;"></div>
+				<input type="submit" class="btn btn-success" value="Save"></input>
+		</form>
+
+	
+	</div>
+</div>
+</body>
+</html>
