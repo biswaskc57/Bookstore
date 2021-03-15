@@ -10,11 +10,12 @@
 <body>
 	<div class="container">
 		<div>
-			<h1>List of books:</h1>
-		</div>
 		<div class="col-md-4">
-		<h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
+		<h1 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h1>
 	</div>
+			<h2>List of books:</h2>
+		</div>
+		
 		<div class="col-md-4" style="padding: 20px 0">
 			<form th:action="@{/logout}" method="post">
 				<input type="submit" value="Sign Out" class="btn btn-sm btn-danger" />
