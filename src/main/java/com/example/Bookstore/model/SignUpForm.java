@@ -3,7 +3,7 @@ package com.example.Bookstore.model;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-@SuppressWarnings("deprecation")
+
 public class SignUpForm {
     
 	@NotEmpty

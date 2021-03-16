@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+	>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"
 	th:href="@{css/bootstrap.min.css}" />
 <head>
@@ -27,8 +27,8 @@
 				<th>Author</th>
 				<th>ISBN</th>
 				<th>Category</th>
-				<th>Edit</th>
 				<th sec:authorize="hasAuthority('ADMIN')"></th>
+				<th></th>
 			</tr>
 			<tr th:each="book : ${books}">
 				<td th:text="${book.title} "></td>
