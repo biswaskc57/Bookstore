@@ -27,6 +27,7 @@ public class User {
     private String role;
     
     public User() {
+    	
     }
 
 	public User(String username, String passwordHash, String role) {
